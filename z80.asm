@@ -1,11 +1,11 @@
 ; 16-bit xorshift Z80 pseudorandom number generator by John Metcalf
 
 ; generates 16-bit pseudorandom numbers with a period of 65535
-; using the xorshift method:
+; using the xorshift method
 
-; hl ^= hl << 7
-; hl ^= hl >> 9
-; hl ^= hl << 8
+; XSHFT ^= XSHFT << 7
+; XSHFT ^= XSHFT >> 9
+; XSHFT ^= XSHFT << 8
 
   LD HL,(XSHFT)
   LD A,H
